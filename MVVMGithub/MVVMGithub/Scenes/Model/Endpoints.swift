@@ -2,7 +2,6 @@ import Foundation
 
 struct GithubAPIParams {
     fileprivate static let baseURL = "https://api.github.com"
-    static let authParams = ""
 }
 
 enum Endpoints {

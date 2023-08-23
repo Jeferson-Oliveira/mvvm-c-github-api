@@ -26,8 +26,7 @@ class GithubUsersService: GithubServiceProtocol {
             .request(endpoint,
                      method: method,
                      parameters: parameters,
-                     encoding: JSONEncoding.default,
-                     headers: ["Authorization" : GithubAPIParams.authParams])
+                     encoding: JSONEncoding.default)
             .responseDecodable(of: T.self, completionHandler: { response in
                 switch response.result {
                 case .success(let model):
