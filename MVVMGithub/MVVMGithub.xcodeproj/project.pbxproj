@@ -44,6 +44,9 @@
 		417E9A332A95B21E002144B6 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A322A95B21E002144B6 /* UserDetailViewModel.swift */; };
 		417E9A352A95B2D0002144B6 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A342A95B2D0002144B6 /* UserRepository.swift */; };
 		417E9A382A95B3BA002144B6 /* UserRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A372A95B3BA002144B6 /* UserRepositoryCell.swift */; };
+		417E9A3B2A95C43D002144B6 /* UserDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A3A2A95C43D002144B6 /* UserDetailViewControllerTests.swift */; };
+		417E9A3D2A95C734002144B6 /* RepositoryCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A3C2A95C734002144B6 /* RepositoryCellTests.swift */; };
+		417E9A3F2A95C7A0002144B6 /* UserDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A3E2A95C7A0002144B6 /* UserDetailViewModelTests.swift */; };
 		44DFA8BE36B05CE965ABA60E /* Pods_MVVMGithubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D163A05159257139893FCE78 /* Pods_MVVMGithubTests.framework */; };
 		AFD0C6E94295F386D726591A /* Pods_MVVMGithub_MVVMGithubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CA2AF3A91819449E6A09BA /* Pods_MVVMGithub_MVVMGithubUITests.framework */; };
 		C27CD0A39F68D1E63F45816A /* Pods_MVVMGithub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8D27585B0B53580CD6B8CF /* Pods_MVVMGithub.framework */; };
@@ -109,6 +112,9 @@
 		417E9A322A95B21E002144B6 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		417E9A342A95B2D0002144B6 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		417E9A372A95B3BA002144B6 /* UserRepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryCell.swift; sourceTree = "<group>"; };
+		417E9A3A2A95C43D002144B6 /* UserDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		417E9A3C2A95C734002144B6 /* RepositoryCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellTests.swift; sourceTree = "<group>"; };
+		417E9A3E2A95C7A0002144B6 /* UserDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModelTests.swift; sourceTree = "<group>"; };
 		5A8D27585B0B53580CD6B8CF /* Pods_MVVMGithub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMGithub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CA2AF3A91819449E6A09BA /* Pods_MVVMGithub_MVVMGithubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMGithub_MVVMGithubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65157996A164FDB006EF1DFD /* Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMGithub-MVVMGithubUITests/Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,10 +182,10 @@
 				417E99E52A95709F002144B6 /* Scenes */,
 				417E99B02A956B68002144B6 /* AppDelegate.swift */,
 				417E99B22A956B68002144B6 /* SceneDelegate.swift */,
-				417E99B42A956B68002144B6 /* ViewController.swift */,
-				417E99B62A956B68002144B6 /* Main.storyboard */,
 				417E9A092A957196002144B6 /* Localizable.strings */,
 				417E99B92A956B69002144B6 /* Assets.xcassets */,
+				417E99B42A956B68002144B6 /* ViewController.swift */,
+				417E99B62A956B68002144B6 /* Main.storyboard */,
 				417E99BB2A956B69002144B6 /* LaunchScreen.storyboard */,
 				417E99BE2A956B69002144B6 /* Info.plist */,
 			);
@@ -279,6 +285,7 @@
 		417E9A122A959A5F002144B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				417E9A392A95C422002144B6 /* UserDetail */,
 				417E9A132A959A5F002144B6 /* UserList */,
 				417E9A1A2A959A5F002144B6 /* Model */,
 			);
@@ -322,6 +329,16 @@
 				417E99F82A95709F002144B6 /* GithubUsersService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		417E9A392A95C422002144B6 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				417E9A3A2A95C43D002144B6 /* UserDetailViewControllerTests.swift */,
+				417E9A3C2A95C734002144B6 /* RepositoryCellTests.swift */,
+				417E9A3E2A95C7A0002144B6 /* UserDetailViewModelTests.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		816E6DBEFE7FF211BC6C5FB5 /* Frameworks */ = {
@@ -640,10 +657,13 @@
 				417E9A262A959A5F002144B6 /* GithubUsersServiceTests.swift in Sources */,
 				417E9A202A959A5F002144B6 /* GithubUsersListViewControllerTests.swift in Sources */,
 				417E9A212A959A5F002144B6 /* GithubUsersCoordinatorTests.swift in Sources */,
+				417E9A3D2A95C734002144B6 /* RepositoryCellTests.swift in Sources */,
 				417E9A282A95A037002144B6 /* MockUrlImageProvider.swift in Sources */,
+				417E9A3F2A95C7A0002144B6 /* UserDetailViewModelTests.swift in Sources */,
 				417E9A1E2A959A5F002144B6 /* GithubUsersServiceMock.swift in Sources */,
 				417E9A1F2A959A5F002144B6 /* Mocks.swift in Sources */,
 				417E9A222A959A5F002144B6 /* UserCellTests.swift in Sources */,
+				417E9A3B2A95C43D002144B6 /* UserDetailViewControllerTests.swift in Sources */,
 				417E9A2B2A95A2EC002144B6 /* GithubUserListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

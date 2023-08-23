@@ -87,10 +87,14 @@ class UserListDisplayDelegateSpy: UserListDisplayDelegate {
 
 class GithubUsersCoordinatorSpy: GithubUsersCoordinator {
     var routerToDetailsCalled = false
+    var routerToRepoUrlCalled = false
+
     override func router(to: GithubUsersCoordinatorRouterPath) {
         switch to {
         case .detail:
             routerToDetailsCalled = true
+        case .repoUrl(_):
+            routerToRepoUrlCalled = true
         }
     }
 }

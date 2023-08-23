@@ -1,4 +1,5 @@
 import Foundation
+import SafariServices.SFSafariViewController
 import XCTest
 
 @testable import MVVMGithub
@@ -24,10 +25,17 @@ class GithubUsersCoordinatorTests: XCTestCase {
         XCTAssertTrue(navControllerSpy.pushedViewController is GithubUsersListViewController)
     }
     
-    func testRouter() {
-        //sut?.router(to: .detail(.mock()))
-        //XCTAssertEqual(navControllerSpy.presentCalled, true)
-        //XCTAssertTrue(navControllerSpy.pushedViewController is GithubUsersListViewController)
+    func testRouterToDetail() {
+        sut?.router(to: .detail(.mock()))
+        XCTAssertEqual(navControllerSpy.pushCalled, true)
+        XCTAssertTrue(navControllerSpy.pushedViewController is UserDetailViewController)
+    }
+    
+    func testRouterToRepoUrl() {
+        guard let url = URL(string: "https://github.com/torvalds/libdc-for-dirk") else { return }
+        sut?.router(to: .repoUrl(url))
+        XCTAssertEqual(navControllerSpy.pushCalled, true)
+        XCTAssertTrue(navControllerSpy.pushedViewController is SFSafariViewController)
     }
 }
 

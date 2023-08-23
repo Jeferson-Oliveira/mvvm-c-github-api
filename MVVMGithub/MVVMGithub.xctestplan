@@ -9,6 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:MVVMGithub.xcodeproj",
+          "identifier" : "417E99AC2A956B68002144B6",
+          "name" : "MVVMGithub"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:MVVMGithub.xcodeproj",
       "identifier" : "417E99AC2A956B68002144B6",

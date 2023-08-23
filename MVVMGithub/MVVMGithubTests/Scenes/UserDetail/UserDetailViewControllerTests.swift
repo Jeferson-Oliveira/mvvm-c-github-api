@@ -5,16 +5,17 @@ import UIKit
 
 @testable import MVVMGithub
 
-class GithubUsersListViewControllerTests: XCTestCase {
-    var sut: GithubUsersListViewController?
+class UserDetailViewControllerTests: XCTestCase {
+    var sut: UserDetailViewController?
     let mockService = GithubUsersServiceMock()
     
     override func setUp() {
         UIImageView.imageFronUrlProvider = MockUrlImageProvider()
         let coordinator = GithubUsersCoordinator(on: UINavigationController())
-        let viewModel = GithubUsersListViewModel(githubService: mockService,
-                                                 coordinator: coordinator)
-        sut = GithubUsersListViewController(viewModel: viewModel)
+        let viewModel = UserDetailViewModel(userToDetail: .mock(),
+                                            githubService: mockService,
+                                            coordinator: coordinator)
+        sut = UserDetailViewController(viewModel: viewModel)
         viewModel.displayDelegate = sut
     }
     

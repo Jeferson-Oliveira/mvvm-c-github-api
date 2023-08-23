@@ -31,6 +31,14 @@ class GithubUsersServiceTests: XCTestCase {
         XCTAssertEqual(sut?.methodCaled, .get)
         XCTAssertEqual(sut?.endpointCaled, "https://api.github.com/users/jeferson")
     }
+    
+    func testGetUserReposRequest() {
+        sut?.getUserRepositories(name: "jeferson", completion: {_ in })
+        
+        XCTAssertEqual(sut?.requestCalled, true)
+        XCTAssertEqual(sut?.methodCaled, .get)
+        XCTAssertEqual(sut?.endpointCaled, "https://api.github.com/users/jeferson/repos")
+    }
 }
 
 // MARK: Test Doubles
