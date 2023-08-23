@@ -1,7 +1,8 @@
-/* 
-  Localizable.strings
-  desafio
+"loading" = "Carregando...";
+"tryAgain" = "Tentar novamente";
+"ok" = "Certo";
+"warning" = "Atenção";
+"noTitle" = "Sem título";
+"noDescription" = "Sem descrição";
+"users" = "Usuários";
 
-  Created by Jeferson de Jesus on 11/08/23.
-  
-*/

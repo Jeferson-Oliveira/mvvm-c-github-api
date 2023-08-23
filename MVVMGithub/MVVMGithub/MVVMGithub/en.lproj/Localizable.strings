@@ -1,7 +1,7 @@
-/* 
-  Localizable.strings
-  desafio
-
-  Created by Jeferson de Jesus on 11/08/23.
-  
-*/
+"loading" = "Loading...";
+"tryAgain" = "Try Again";
+"ok" = "Ok";
+"warning" = "Warning";
+"noTitle" = "No title";
+"noDescription" = "No description";
+"users" = "Users";

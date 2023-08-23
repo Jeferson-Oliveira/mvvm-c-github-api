@@ -1,3 +1,49 @@
-PODFILE CHECKSUM: 4e960b8381f40b6f11f42a56bf6fc113e43472fc
+PODS:
+  - Alamofire (5.4.4)
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
+    - iOSSnapshotTestCase/Core
+  - Nimble (9.2.1)
+  - Nimble-Snapshots (9.0.0):
+    - Nimble-Snapshots/Core (= 9.0.0)
+  - Nimble-Snapshots/Core (9.0.0):
+    - iOSSnapshotTestCase (~> 6.0)
+    - Nimble
+  - RxCocoa (6.0.0):
+    - RxRelay (= 6.0.0)
+    - RxSwift (= 6.0.0)
+  - RxRelay (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4.2)
+  - Nimble (~> 9.2)
+  - Nimble-Snapshots (~> 9.0.0)
+  - RxCocoa (~> 6.0.0)
+  - RxSwift (~> 6.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - iOSSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Nimble-Snapshots: 36b027fd637b3e405ddc8362203d9dad3f5405fd
+  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
+  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+
+PODFILE CHECKSUM: 6491b6ac59a3ec8e672f56f1722f047090601035
 
 COCOAPODS: 1.12.1
