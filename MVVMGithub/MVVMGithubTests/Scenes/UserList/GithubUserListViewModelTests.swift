@@ -77,7 +77,7 @@ class GithubUserListViewModelTests: XCTestCase {
         
         // Assert filtered list state
         XCTAssertNotEqual(mockedUsers.count, sut?.getUsersCount())
-        XCTAssertNotEqual(mockedUsers.count, 1)
+        XCTAssertEqual(sut?.getUsersCount(), 1)
         
         sut?.filterUsers(name: .empty)
         
