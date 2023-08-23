@@ -11,6 +11,7 @@ class GithubUsersListViewController: BaseViewController {
         let view = GithubUsersListListView()
         view.tableView.dataSource = self
         view.tableView.delegate = self
+        view.searchBar.delegate = self
         return view
     }()
     
@@ -29,6 +30,7 @@ class GithubUsersListViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.getUsers()
+        view.endEditing(true)
     }
 
 }
@@ -88,3 +90,19 @@ extension GithubUsersListViewController: UITableViewDelegate, UITableViewDataSou
     }
 }
 
+extension GithubUsersListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.filterUsers(name: searchBar.text ?? .empty)
+        view.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filterUsers(name: searchText)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.text = .empty
+        viewModel.filterUsers(name: .empty)
+        view.endEditing(true)
+    }
+}

@@ -217,10 +217,10 @@
 		417E99E62A95709F002144B6 /* UsersList */ = {
 			isa = PBXGroup;
 			children = (
-				417E99EB2A95709F002144B6 /* UserCell.swift */,
+				417E99EA2A95709F002144B6 /* GithubUsersListViewController.swift */,
 				417E99E92A95709F002144B6 /* GithubUsersListViewModel.swift */,
 				417E99E82A95709F002144B6 /* GithubUsersListListView.swift */,
-				417E99EA2A95709F002144B6 /* GithubUsersListViewController.swift */,
+				417E99EB2A95709F002144B6 /* UserCell.swift */,
 				417E99EC2A95709F002144B6 /* GithubUsersCoordinator.swift */,
 			);
 			path = UsersList;
@@ -291,8 +291,8 @@
 			children = (
 				417E9A142A959A5F002144B6 /* GithubUsersListViewControllerTests.swift */,
 				417E9A152A959A5F002144B6 /* GithubUsersCoordinatorTests.swift */,
-				417E9A162A959A5F002144B6 /* UserCellTests.swift */,
 				417E9A2A2A95A2EC002144B6 /* GithubUserListViewModelTests.swift */,
+				417E9A162A959A5F002144B6 /* UserCellTests.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -309,8 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				417E9A2E2A95AD19002144B6 /* UserDetailViewController.swift */,
-				417E9A302A95ADC1002144B6 /* UserDetailView.swift */,
 				417E9A322A95B21E002144B6 /* UserDetailViewModel.swift */,
+				417E9A302A95ADC1002144B6 /* UserDetailView.swift */,
 				417E9A372A95B3BA002144B6 /* UserRepositoryCell.swift */,
 			);
 			path = UserDetail;
@@ -829,6 +829,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 296LD5L9TC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MVVMGithub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -856,6 +857,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 296LD5L9TC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MVVMGithub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -32,4 +32,5 @@ class GithubUsersListViewControllerTests: XCTestCase {
         //expect(self.sut) == recordSnapshot(sizes: sizes)
         expect(self.sut) == snapshot(sizes: sizes)
     }
+  
 }

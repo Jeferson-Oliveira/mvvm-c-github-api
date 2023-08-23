@@ -3,7 +3,17 @@ import UIKit
 
 class GithubUsersListListView: UIView {
     
-    var tableView: UITableView = {
+    let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.barStyle = .black
+        searchBar.searchBarStyle = .minimal
+        searchBar.placeholder = "search".localizable()
+        searchBar.showsCancelButton = true
+        return searchBar
+    }()
+    
+    let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .black
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,14 +41,18 @@ extension GithubUsersListListView: ViewConfiguration {
     }
     
     func buildViewHierarchy() {
+        addSubview(searchBar)
         addSubview(tableView)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 8),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 8),
         ])
     }

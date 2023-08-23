@@ -2,14 +2,14 @@ import UIKit
 
 class UserDetailView: UIView {
     
-    var avatarImage: UIImageView = {
+    let avatarImage: UIImageView = {
         let avatarImage = UIImageView()
         avatarImage.translatesAutoresizingMaskIntoConstraints = false
         avatarImage.roundCorners(with: 20)
         return avatarImage
     }()
     
-    var nameLabel: UILabel = {
+    let nameLabel: UILabel = {
         let nameLabel = UILabel()
         nameLabel.textColor = .white
         nameLabel.textAlignment = .center
@@ -17,7 +17,7 @@ class UserDetailView: UIView {
         return nameLabel
     }()
     
-    var companyLabel: UILabel = {
+    let companyLabel: UILabel = {
         let companyLabel = UILabel()
         companyLabel.textColor = .white
         companyLabel.textAlignment = .center
@@ -25,7 +25,7 @@ class UserDetailView: UIView {
         return companyLabel
     }()
     
-    var emailLabel: UILabel = {
+    let emailLabel: UILabel = {
         let emailLabel = UILabel()
         emailLabel.textColor = .white
         emailLabel.textAlignment = .center
@@ -33,7 +33,7 @@ class UserDetailView: UIView {
         return emailLabel
     }()
     
-    var reposTitleLabel: UILabel = {
+    let reposTitleLabel: UILabel = {
         let reposTitleLabel = UILabel()
         reposTitleLabel.text = "repos".localizable()
         reposTitleLabel.textColor = .white
@@ -42,7 +42,7 @@ class UserDetailView: UIView {
         return reposTitleLabel
     }()
     
-    var labelsStackView: UIStackView = {
+    let labelsStackView: UIStackView = {
         let labelsStackView = UIStackView()
         labelsStackView.axis = .vertical
         labelsStackView.distribution = .fillEqually
@@ -50,7 +50,7 @@ class UserDetailView: UIView {
         return labelsStackView
     }()
     
-    var tableView: UITableView = {
+    let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .black
         tableView.translatesAutoresizingMaskIntoConstraints = false

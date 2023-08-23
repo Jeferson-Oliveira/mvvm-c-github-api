@@ -64,6 +64,26 @@ class GithubUserListViewModelTests: XCTestCase {
         
         XCTAssertTrue(coordinatorSpy.routerToDetailsCalled)
     }
+    
+    func testFilterAction() {
+        serviceMock.shouldReturnSucess = true
+        let mockedUsers: [User] = User.mock()
+        sut?.getUsers()
+        
+        // Assert initial list state
+        XCTAssertEqual(mockedUsers.count, sut?.getUsersCount())
+
+        sut?.filterUsers(name: "user3")
+        
+        // Assert filtered list state
+        XCTAssertNotEqual(mockedUsers.count, sut?.getUsersCount())
+        XCTAssertNotEqual(mockedUsers.count, 1)
+        
+        sut?.filterUsers(name: .empty)
+        
+        // Assert reset list state
+        XCTAssertEqual(mockedUsers.count, sut?.getUsersCount())
+    }
 }
 
 // MARK: Test Doubles

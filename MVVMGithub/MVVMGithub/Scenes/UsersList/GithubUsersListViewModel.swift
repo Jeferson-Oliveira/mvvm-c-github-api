@@ -8,6 +8,7 @@ enum UserListViewState {
 
 protocol GithubUsersListViewModelProtocol {
     func getUsers()
+    func filterUsers(name: String)
     func detailUser(index: Int)
     func getUsersCount() -> Int
     func getUserFronIndex(index: Int) -> User
@@ -15,9 +16,10 @@ protocol GithubUsersListViewModelProtocol {
 
 class GithubUsersListViewModel: GithubUsersListViewModelProtocol {
     
-    let coordinator: GithubUsersCoordinatorProtocol
-    let githubService: GithubServiceProtocol
-    var usersResponse = [User]()
+    private let coordinator: GithubUsersCoordinatorProtocol
+    private let githubService: GithubServiceProtocol
+    private var usersResponse = [User]()
+    private var filteredUsers = [User]()
 
     weak var displayDelegate: UserListDisplayDelegate?
 
@@ -33,6 +35,7 @@ class GithubUsersListViewModel: GithubUsersListViewModelProtocol {
             switch result {
             case .success(let users):
                 self.usersResponse = users
+                self.filteredUsers = users
                 self.displayDelegate?.didUpdateViewState(state: .usersLoaded)
             case .failure(let error):
                 self.displayDelegate?.didUpdateViewState(state: .error(error.localizedDescription))
@@ -45,10 +48,19 @@ class GithubUsersListViewModel: GithubUsersListViewModelProtocol {
     }
     
     func getUsersCount() -> Int {
-        return usersResponse.count
+        return filteredUsers.count
     }
     
     func getUserFronIndex(index: Int) -> User {
-        return usersResponse[index]
+        return filteredUsers[index]
+    }
+    
+    func filterUsers(name: String) {
+        if name.isEmpty {
+            filteredUsers = usersResponse
+        } else {
+            filteredUsers = usersResponse.filter { $0.login?.lowercased().contains(name.lowercased()) ?? false }
+        }
+        displayDelegate?.didUpdateViewState(state: .usersLoaded)
     }
 }
