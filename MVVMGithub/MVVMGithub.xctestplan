@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "72EC7501-0C16-42E5-B7A4-9708A658D336",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MVVMGithub.xcodeproj",
+      "identifier" : "417E99AC2A956B68002144B6",
+      "name" : "MVVMGithub"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MVVMGithub.xcodeproj",
+        "identifier" : "417E99C22A956B69002144B6",
+        "name" : "MVVMGithubTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MVVMGithub.xcodeproj",
+        "identifier" : "417E99CC2A956B69002144B6",
+        "name" : "MVVMGithubUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

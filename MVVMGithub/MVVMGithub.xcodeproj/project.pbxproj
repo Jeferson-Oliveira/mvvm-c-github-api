@@ -13,9 +13,7 @@
 		417E99B82A956B68002144B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417E99B62A956B68002144B6 /* Main.storyboard */; };
 		417E99BA2A956B69002144B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417E99B92A956B69002144B6 /* Assets.xcassets */; };
 		417E99BD2A956B69002144B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417E99BB2A956B69002144B6 /* LaunchScreen.storyboard */; };
-		417E99C82A956B69002144B6 /* MVVMGithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99C72A956B69002144B6 /* MVVMGithubTests.swift */; };
 		417E99D22A956B69002144B6 /* MVVMGithubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99D12A956B69002144B6 /* MVVMGithubUITests.swift */; };
-		417E99D42A956B69002144B6 /* MVVMGithubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99D32A956B69002144B6 /* MVVMGithubUITestsLaunchTests.swift */; };
 		417E99FB2A95709F002144B6 /* GithubUsersListListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99E82A95709F002144B6 /* GithubUsersListListView.swift */; };
 		417E99FC2A95709F002144B6 /* GithubUsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99E92A95709F002144B6 /* GithubUsersListViewModel.swift */; };
 		417E99FD2A95709F002144B6 /* GithubUsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99EA2A95709F002144B6 /* GithubUsersListViewController.swift */; };
@@ -31,6 +29,16 @@
 		417E9A072A95709F002144B6 /* GithubUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99F82A95709F002144B6 /* GithubUsersService.swift */; };
 		417E9A082A95709F002144B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E99F92A95709F002144B6 /* User.swift */; };
 		417E9A0B2A957196002144B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 417E9A092A957196002144B6 /* Localizable.strings */; };
+		417E9A1D2A959A5F002144B6 /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A0F2A959A5F002144B6 /* UINavigationControllerSpy.swift */; };
+		417E9A1E2A959A5F002144B6 /* GithubUsersServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A102A959A5F002144B6 /* GithubUsersServiceMock.swift */; };
+		417E9A1F2A959A5F002144B6 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A112A959A5F002144B6 /* Mocks.swift */; };
+		417E9A202A959A5F002144B6 /* GithubUsersListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A142A959A5F002144B6 /* GithubUsersListViewControllerTests.swift */; };
+		417E9A212A959A5F002144B6 /* GithubUsersCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A152A959A5F002144B6 /* GithubUsersCoordinatorTests.swift */; };
+		417E9A222A959A5F002144B6 /* UserCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A162A959A5F002144B6 /* UserCellTests.swift */; };
+		417E9A262A959A5F002144B6 /* GithubUsersServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A1C2A959A5F002144B6 /* GithubUsersServiceTests.swift */; };
+		417E9A282A95A037002144B6 /* MockUrlImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A272A95A037002144B6 /* MockUrlImageProvider.swift */; };
+		417E9A292A95A0C2002144B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417E99B92A956B69002144B6 /* Assets.xcassets */; };
+		417E9A2B2A95A2EC002144B6 /* GithubUserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A2A2A95A2EC002144B6 /* GithubUserListViewModelTests.swift */; };
 		44DFA8BE36B05CE965ABA60E /* Pods_MVVMGithubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D163A05159257139893FCE78 /* Pods_MVVMGithubTests.framework */; };
 		AFD0C6E94295F386D726591A /* Pods_MVVMGithub_MVVMGithubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CA2AF3A91819449E6A09BA /* Pods_MVVMGithub_MVVMGithubUITests.framework */; };
 		C27CD0A39F68D1E63F45816A /* Pods_MVVMGithub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8D27585B0B53580CD6B8CF /* Pods_MVVMGithub.framework */; };
@@ -63,10 +71,8 @@
 		417E99BC2A956B69002144B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		417E99BE2A956B69002144B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417E99C32A956B69002144B6 /* MVVMGithubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMGithubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		417E99C72A956B69002144B6 /* MVVMGithubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMGithubTests.swift; sourceTree = "<group>"; };
 		417E99CD2A956B69002144B6 /* MVVMGithubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMGithubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		417E99D12A956B69002144B6 /* MVVMGithubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMGithubUITests.swift; sourceTree = "<group>"; };
-		417E99D32A956B69002144B6 /* MVVMGithubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMGithubUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		417E99E82A95709F002144B6 /* GithubUsersListListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersListListView.swift; sourceTree = "<group>"; };
 		417E99E92A95709F002144B6 /* GithubUsersListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersListViewModel.swift; sourceTree = "<group>"; };
 		417E99EA2A95709F002144B6 /* GithubUsersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,15 @@
 		417E9A0A2A957196002144B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = MVVMGithub/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		417E9A0C2A9577BB002144B6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "MVVMGithub/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		417E9A0D2A9577CE002144B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MVVMGithub/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		417E9A0F2A959A5F002144B6 /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
+		417E9A102A959A5F002144B6 /* GithubUsersServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersServiceMock.swift; sourceTree = "<group>"; };
+		417E9A112A959A5F002144B6 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		417E9A142A959A5F002144B6 /* GithubUsersListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersListViewControllerTests.swift; sourceTree = "<group>"; };
+		417E9A152A959A5F002144B6 /* GithubUsersCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersCoordinatorTests.swift; sourceTree = "<group>"; };
+		417E9A162A959A5F002144B6 /* UserCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCellTests.swift; sourceTree = "<group>"; };
+		417E9A1C2A959A5F002144B6 /* GithubUsersServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersServiceTests.swift; sourceTree = "<group>"; };
+		417E9A272A95A037002144B6 /* MockUrlImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlImageProvider.swift; sourceTree = "<group>"; };
+		417E9A2A2A95A2EC002144B6 /* GithubUserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListViewModelTests.swift; sourceTree = "<group>"; };
 		5A8D27585B0B53580CD6B8CF /* Pods_MVVMGithub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMGithub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CA2AF3A91819449E6A09BA /* Pods_MVVMGithub_MVVMGithubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMGithub_MVVMGithubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65157996A164FDB006EF1DFD /* Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMGithub-MVVMGithubUITests/Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,7 +179,8 @@
 		417E99C62A956B69002144B6 /* MVVMGithubTests */ = {
 			isa = PBXGroup;
 			children = (
-				417E99C72A956B69002144B6 /* MVVMGithubTests.swift */,
+				417E9A122A959A5F002144B6 /* Scenes */,
+				417E9A0E2A959A5F002144B6 /* TestUtil */,
 			);
 			path = MVVMGithubTests;
 			sourceTree = "<group>";
@@ -173,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				417E99D12A956B69002144B6 /* MVVMGithubUITests.swift */,
-				417E99D32A956B69002144B6 /* MVVMGithubUITestsLaunchTests.swift */,
 			);
 			path = MVVMGithubUITests;
 			sourceTree = "<group>";
@@ -235,6 +250,45 @@
 				417E99F72A95709F002144B6 /* Endpoints.swift */,
 				417E99F92A95709F002144B6 /* User.swift */,
 				417E99F82A95709F002144B6 /* GithubUsersService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		417E9A0E2A959A5F002144B6 /* TestUtil */ = {
+			isa = PBXGroup;
+			children = (
+				417E9A0F2A959A5F002144B6 /* UINavigationControllerSpy.swift */,
+				417E9A102A959A5F002144B6 /* GithubUsersServiceMock.swift */,
+				417E9A112A959A5F002144B6 /* Mocks.swift */,
+				417E9A272A95A037002144B6 /* MockUrlImageProvider.swift */,
+			);
+			path = TestUtil;
+			sourceTree = "<group>";
+		};
+		417E9A122A959A5F002144B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				417E9A132A959A5F002144B6 /* UserList */,
+				417E9A1A2A959A5F002144B6 /* Model */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		417E9A132A959A5F002144B6 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				417E9A142A959A5F002144B6 /* GithubUsersListViewControllerTests.swift */,
+				417E9A152A959A5F002144B6 /* GithubUsersCoordinatorTests.swift */,
+				417E9A162A959A5F002144B6 /* UserCellTests.swift */,
+				417E9A2A2A95A2EC002144B6 /* GithubUserListViewModelTests.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		417E9A1A2A959A5F002144B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				417E9A1C2A959A5F002144B6 /* GithubUsersServiceTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417E9A292A95A0C2002144B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +600,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417E99C82A956B69002144B6 /* MVVMGithubTests.swift in Sources */,
+				417E9A1D2A959A5F002144B6 /* UINavigationControllerSpy.swift in Sources */,
+				417E9A262A959A5F002144B6 /* GithubUsersServiceTests.swift in Sources */,
+				417E9A202A959A5F002144B6 /* GithubUsersListViewControllerTests.swift in Sources */,
+				417E9A212A959A5F002144B6 /* GithubUsersCoordinatorTests.swift in Sources */,
+				417E9A282A95A037002144B6 /* MockUrlImageProvider.swift in Sources */,
+				417E9A1E2A959A5F002144B6 /* GithubUsersServiceMock.swift in Sources */,
+				417E9A1F2A959A5F002144B6 /* Mocks.swift in Sources */,
+				417E9A222A959A5F002144B6 /* UserCellTests.swift in Sources */,
+				417E9A2B2A95A2EC002144B6 /* GithubUserListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +617,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				417E99D22A956B69002144B6 /* MVVMGithubUITests.swift in Sources */,
-				417E99D42A956B69002144B6 /* MVVMGithubUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

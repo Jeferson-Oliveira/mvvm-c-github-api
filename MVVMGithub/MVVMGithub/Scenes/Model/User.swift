@@ -12,6 +12,14 @@ struct User: Codable {
         case avatarUrl = "avatar_url"
     }
     
+    init(id: Int,
+         login: String,
+         avatarUrl: URL?) {
+        self.id = id
+        self.login = login
+        self.avatarUrl = avatarUrl
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decodeIfPresent(Int.self, forKey: .id)
