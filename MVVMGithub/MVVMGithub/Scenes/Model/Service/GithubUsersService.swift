@@ -4,6 +4,7 @@ import Alamofire
 protocol GithubServiceProtocol {
     func getUsers(completion: @escaping (Result<[User], Error>) -> Void)
     func getUser(name: String, completion: @escaping (Result<User, Error>) -> Void)
+    func getUserRepositories(name: String, completion: @escaping (Result<[UserRepository], Error>) -> Void)
 }
 
 class GithubUsersService: GithubServiceProtocol {
@@ -16,6 +17,10 @@ class GithubUsersService: GithubServiceProtocol {
     
     func getUser(name: String, completion: @escaping (Result<User, Error>) -> Void) {
         request(endpoint: Endpoints.userDetail(name).url(), completion: completion)
+    }
+    
+    func getUserRepositories(name: String, completion: @escaping (Result<[UserRepository], Error>) -> Void) {
+        request(endpoint: Endpoints.userRepositories(name).url(), completion: completion)
     }
 
     func request<T: Codable>(endpoint: String,

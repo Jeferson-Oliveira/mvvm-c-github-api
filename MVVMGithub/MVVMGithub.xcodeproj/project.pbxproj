@@ -39,6 +39,11 @@
 		417E9A282A95A037002144B6 /* MockUrlImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A272A95A037002144B6 /* MockUrlImageProvider.swift */; };
 		417E9A292A95A0C2002144B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417E99B92A956B69002144B6 /* Assets.xcassets */; };
 		417E9A2B2A95A2EC002144B6 /* GithubUserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A2A2A95A2EC002144B6 /* GithubUserListViewModelTests.swift */; };
+		417E9A2F2A95AD19002144B6 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A2E2A95AD19002144B6 /* UserDetailViewController.swift */; };
+		417E9A312A95ADC1002144B6 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A302A95ADC1002144B6 /* UserDetailView.swift */; };
+		417E9A332A95B21E002144B6 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A322A95B21E002144B6 /* UserDetailViewModel.swift */; };
+		417E9A352A95B2D0002144B6 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A342A95B2D0002144B6 /* UserRepository.swift */; };
+		417E9A382A95B3BA002144B6 /* UserRepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417E9A372A95B3BA002144B6 /* UserRepositoryCell.swift */; };
 		44DFA8BE36B05CE965ABA60E /* Pods_MVVMGithubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D163A05159257139893FCE78 /* Pods_MVVMGithubTests.framework */; };
 		AFD0C6E94295F386D726591A /* Pods_MVVMGithub_MVVMGithubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CA2AF3A91819449E6A09BA /* Pods_MVVMGithub_MVVMGithubUITests.framework */; };
 		C27CD0A39F68D1E63F45816A /* Pods_MVVMGithub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8D27585B0B53580CD6B8CF /* Pods_MVVMGithub.framework */; };
@@ -99,6 +104,11 @@
 		417E9A1C2A959A5F002144B6 /* GithubUsersServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubUsersServiceTests.swift; sourceTree = "<group>"; };
 		417E9A272A95A037002144B6 /* MockUrlImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUrlImageProvider.swift; sourceTree = "<group>"; };
 		417E9A2A2A95A2EC002144B6 /* GithubUserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListViewModelTests.swift; sourceTree = "<group>"; };
+		417E9A2E2A95AD19002144B6 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		417E9A302A95ADC1002144B6 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		417E9A322A95B21E002144B6 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		417E9A342A95B2D0002144B6 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		417E9A372A95B3BA002144B6 /* UserRepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryCell.swift; sourceTree = "<group>"; };
 		5A8D27585B0B53580CD6B8CF /* Pods_MVVMGithub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMGithub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64CA2AF3A91819449E6A09BA /* Pods_MVVMGithub_MVVMGithubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMGithub_MVVMGithubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65157996A164FDB006EF1DFD /* Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMGithub-MVVMGithubUITests/Pods-MVVMGithub-MVVMGithubUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +206,7 @@
 		417E99E52A95709F002144B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				417E9A2D2A95ACF8002144B6 /* UserDetail */,
 				417E99E62A95709F002144B6 /* UsersList */,
 				417E99ED2A95709F002144B6 /* Common */,
 				417E99F62A95709F002144B6 /* Model */,
@@ -247,9 +258,9 @@
 		417E99F62A95709F002144B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				417E99F72A95709F002144B6 /* Endpoints.swift */,
+				417E9A362A95B2DD002144B6 /* Service */,
 				417E99F92A95709F002144B6 /* User.swift */,
-				417E99F82A95709F002144B6 /* GithubUsersService.swift */,
+				417E9A342A95B2D0002144B6 /* UserRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +302,26 @@
 				417E9A1C2A959A5F002144B6 /* GithubUsersServiceTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		417E9A2D2A95ACF8002144B6 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				417E9A2E2A95AD19002144B6 /* UserDetailViewController.swift */,
+				417E9A302A95ADC1002144B6 /* UserDetailView.swift */,
+				417E9A322A95B21E002144B6 /* UserDetailViewModel.swift */,
+				417E9A372A95B3BA002144B6 /* UserRepositoryCell.swift */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		417E9A362A95B2DD002144B6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				417E99F72A95709F002144B6 /* Endpoints.swift */,
+				417E99F82A95709F002144B6 /* GithubUsersService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		816E6DBEFE7FF211BC6C5FB5 /* Frameworks */ = {
@@ -576,8 +607,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417E9A312A95ADC1002144B6 /* UserDetailView.swift in Sources */,
 				417E9A032A95709F002144B6 /* BaseViewController.swift in Sources */,
+				417E9A332A95B21E002144B6 /* UserDetailViewModel.swift in Sources */,
 				417E9A012A95709F002144B6 /* UIView+Extension.swift in Sources */,
+				417E9A2F2A95AD19002144B6 /* UserDetailViewController.swift in Sources */,
 				417E9A002A95709F002144B6 /* UIImageView+Extension.swift in Sources */,
 				417E99FF2A95709F002144B6 /* GithubUsersCoordinator.swift in Sources */,
 				417E99FD2A95709F002144B6 /* GithubUsersListViewController.swift in Sources */,
@@ -589,7 +623,9 @@
 				417E99B12A956B68002144B6 /* AppDelegate.swift in Sources */,
 				417E99B32A956B68002144B6 /* SceneDelegate.swift in Sources */,
 				417E99FE2A95709F002144B6 /* UserCell.swift in Sources */,
+				417E9A382A95B3BA002144B6 /* UserRepositoryCell.swift in Sources */,
 				417E99FC2A95709F002144B6 /* GithubUsersListViewModel.swift in Sources */,
+				417E9A352A95B2D0002144B6 /* UserRepository.swift in Sources */,
 				417E9A062A95709F002144B6 /* Endpoints.swift in Sources */,
 				417E9A082A95709F002144B6 /* User.swift in Sources */,
 				417E99FB2A95709F002144B6 /* GithubUsersListListView.swift in Sources */,

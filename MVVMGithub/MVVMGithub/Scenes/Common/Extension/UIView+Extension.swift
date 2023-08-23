@@ -4,10 +4,10 @@ extension UIView {
 
     func fitAllConstraints(on superView: UIView) {
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: superView.topAnchor),
-            self.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-            self.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
-            self.bottomAnchor.constraint(equalTo: superView.bottomAnchor)
+            self.topAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.topAnchor),
+            self.leadingAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.leadingAnchor),
+            self.trailingAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.trailingAnchor),
+            self.bottomAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     

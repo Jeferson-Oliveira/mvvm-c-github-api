@@ -29,7 +29,7 @@ class GithubUsersListViewModel: GithubUsersListViewModelProtocol {
     
     func getUsers() {
         self.displayDelegate?.didUpdateViewState(state: .loading)
-        githubService.getUsers(completion: { result in
+        githubService.getUsers { result in
             switch result {
             case .success(let users):
                 self.usersResponse = users
@@ -37,7 +37,7 @@ class GithubUsersListViewModel: GithubUsersListViewModelProtocol {
             case .failure(let error):
                 self.displayDelegate?.didUpdateViewState(state: .error(error.localizedDescription))
             }
-        })
+        }
     }
     
     func detailUser(index: Int) {

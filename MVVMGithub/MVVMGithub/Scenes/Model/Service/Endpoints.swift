@@ -7,6 +7,8 @@ struct GithubAPIParams {
 enum Endpoints {
     case listUsers
     case userDetail(String)
+    case userRepositories(String)
+
     
     func url() -> String {
         switch self {
@@ -14,6 +16,8 @@ enum Endpoints {
             return GithubAPIParams.baseURL + "/users"
         case .userDetail(let name):
             return GithubAPIParams.baseURL + "/users/\(name)"
+        case .userRepositories(let name):
+            return GithubAPIParams.baseURL + "/users/\(name)/repos"
         }
     }
 }

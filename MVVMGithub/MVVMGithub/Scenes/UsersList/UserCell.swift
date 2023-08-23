@@ -9,11 +9,11 @@ class UserCell: UITableViewCell {
         return avatarImage
     }()
     
-    var titleLabel: UILabel = {
-        let titleLabel = UILabel()
-        titleLabel.textColor = .white
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        return titleLabel
+    var nameLabel: UILabel = {
+        let nameLabel = UILabel()
+        nameLabel.textColor = .white
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        return nameLabel
     }()
     
     var labelsStackView: UIStackView = {
@@ -42,7 +42,7 @@ class UserCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         avatarImage.image = nil
-        titleLabel.text = .empty
+        nameLabel.text = .empty
     }
     
     func updateCell(item: User) {
@@ -50,7 +50,7 @@ class UserCell: UITableViewCell {
             self.avatarImage.fromURL(from: url, placeholder: UIImage(named: "no_image_icon"))
         }
         self.avatarImage.backgroundColor = .gray.withAlphaComponent(0.5)
-        self.titleLabel.text = item.login
+        self.nameLabel.text = item.login
     }
 }
 
@@ -64,7 +64,7 @@ extension UserCell: ViewConfiguration {
     func buildViewHierarchy() {
         contentView.addSubview(avatarImage)
         contentView.addSubview(labelsStackView)
-        labelsStackView.addArrangedSubview(titleLabel)
+        labelsStackView.addArrangedSubview(nameLabel)
     }
     
     func setupConstraints() {

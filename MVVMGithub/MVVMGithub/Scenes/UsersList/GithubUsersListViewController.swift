@@ -75,6 +75,11 @@ extension GithubUsersListViewController: UITableViewDelegate, UITableViewDataSou
         return 90
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.detailUser(index: indexPath.row)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.identifier, for: indexPath) as? UserCell else { return  UITableViewCell() }
         let user = self.viewModel.getUserFronIndex(index: indexPath.row)

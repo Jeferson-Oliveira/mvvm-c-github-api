@@ -18,14 +18,14 @@ class UserCellTests: XCTestCase {
     func testCellSetupMethod() {
         let userMock: User = .mock()
         sut?.updateCell(item: userMock)
-        XCTAssertEqual(sut?.titleLabel.text, userMock.login)
+        XCTAssertEqual(sut?.nameLabel.text, userMock.login)
     }
     
     func testCellPrepareForReuseMethot() {
         let userMock: User = .mock()
         sut?.updateCell(item: userMock)
         sut?.prepareForReuse()
-        XCTAssertEqual(sut?.titleLabel.text, .empty)
+        XCTAssertEqual(sut?.nameLabel.text, .empty)
         XCTAssertEqual(sut?.avatarImage.image, nil)
     }
 }
